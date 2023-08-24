@@ -41,6 +41,7 @@
         :row-class-name="rowClassName"
         :row-style="rowStyle"
         :highlight="highlightCurrentRow"
+        :highlight-selected="highlightSelectedRow"
         :style="{
            width: bodyWidth
         }">
@@ -112,6 +113,7 @@
           :store="store"
           :stripe="stripe"
           :highlight="highlightCurrentRow"
+          :highlight-selected="highlightSelectedRow"
           :row-class-name="rowClassName"
           :row-style="rowStyle"
           :style="{
@@ -175,6 +177,7 @@
           :row-class-name="rowClassName"
           :row-style="rowStyle"
           :highlight="highlightCurrentRow"
+          :highlight-selected="highlightSelectedRow"
           :style="{
             width: bodyWidth
           }">
@@ -294,6 +297,7 @@
       headerCellStyle: [Object, Function],
 
       highlightCurrentRow: Boolean,
+      highlightSelectedRow: Boolean,
 
       currentRowKey: [String, Number],
 

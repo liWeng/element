@@ -28,7 +28,8 @@ export default {
     rowClassName: [String, Function],
     rowStyle: [Object, Function],
     fixed: String,
-    highlight: Boolean
+    highlight: Boolean,
+    highlightSelected: Boolean
   },
 
   render(h) {
@@ -171,6 +172,10 @@ export default {
       const classes = ['el-table__row'];
       if (this.table.highlightCurrentRow && row === this.store.states.currentRow) {
         classes.push('current-row');
+      }
+
+      if (this.table.highlightSelectedRow && this.store.states.selection.includes(row)) {
+        classes.push('selected-row-high');
       }
 
       if (this.stripe && rowIndex % 2 === 1) {
